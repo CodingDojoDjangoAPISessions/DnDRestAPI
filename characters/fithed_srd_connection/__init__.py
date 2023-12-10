@@ -1,9 +1,9 @@
 from dotenv import dotenv_values
 import requests
 
-MY_DOTENV = dotenv_values("../../.env")
+MY_DOTENV = dotenv_values("../../dnd_api/.env")
 
-# print(MY_DOTENV)
+print(MY_DOTENV)
 
 BASE_URL = 'https://www.dnd5eapi.co/api'
 

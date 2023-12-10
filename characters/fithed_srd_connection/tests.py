@@ -1,5 +1,10 @@
 from __init__ import get_alignment_by_index
 
+import os
+
+spam = str(os.getenv("SPAM"))
+print(spam)
+
 # Create your tests here.
 
 # "Good" not in the list of alignments, warning should print

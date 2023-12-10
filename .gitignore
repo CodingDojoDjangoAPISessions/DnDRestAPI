@@ -61,7 +61,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+dnd_api/.env
 .venv
 env/
 venv/

@@ -10,6 +10,8 @@
 ### Consuming the D&D 5th Edition SRD API
 
 - Using `dotenv` with .env files to keep API keys
+  - Add dotenv.load_dotenv() to `settings.py`
+  - Access app wide with `os.getenv()`
 - Creating our connection package
 - Building functions to consume the endpoints
 - Unit Testing
