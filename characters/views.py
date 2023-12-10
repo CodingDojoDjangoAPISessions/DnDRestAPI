@@ -4,6 +4,8 @@ from .models import Character  # Import the Character model from the current app
 from users import views  # Import views from the 'users' app (if exists)
 
 def first_view(request):
+    api_key = "open_sesame"
+    ## use api_key for API request
     return HttpResponse('Hello Ninjas!')  # Returns a simple HTTP response saying "Hello Ninjas!"
 
 def create_character(request):
