@@ -12,6 +12,7 @@
 - Using `dotenv` with .env files to keep API keys
   - Add dotenv.load_dotenv() to `settings.py`
   - Access app wide with `os.getenv()`
+  - https://pypi.org/project/python-dotenv/
 - Creating our connection package
 - Building functions to consume the endpoints
 - Unit Testing

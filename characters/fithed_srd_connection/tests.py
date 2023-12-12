@@ -1,13 +1,10 @@
-from __init__ import get_alignment_by_index
-
-import os
-
-spam = str(os.getenv("SPAM"))
-print(spam)
-
+from __init__ import *
+from pprint import pprint
 # Create your tests here.
 
 # "Good" not in the list of alignments, warning should print
+
+pprint(get_all_classes())
 
 assert get_alignment_by_index("Good") == {"error": "Not found"}
 print("Testing get_alignment_by_index() with incorrect index: PASSED")

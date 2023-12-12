@@ -40,7 +40,11 @@
 
                 <div class="form-group">
                     <label for="charClass">Class:</label>
-                    <input type="text" class="form-control" id="charClass" name="char_class" placeholder="Character Class">
+                    <select id="charClass" name="char_class" class="form-control">
+                        {% for class_option in class_options %}
+                            <option value="{{class_option.index}}">{{class_option.name}}</option>
+                        {% endfor %}
+                    </select>
                 </div>
 
                 <div class="form-group">
