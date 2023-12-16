@@ -38,27 +38,27 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- First Sample Row -->
-                <tr>
-                    <td><a href="#linkToCharacterPage1">Sample Character 1</a></td>
-                    <td>John Doe</td>
-                    <td>Under Construction</td>
-                    <td>
-                        <a href="#editCharacter1">Edit</a> | 
-                        <a href="#deleteCharacter1">Delete</a>
-                    </td>
-                </tr>
-                <!-- Second Sample Row -->
-                <tr>
-                    <td><a href="#linkToCharacterPage2">Sample Character 2</a></td>
-                    <td>Jane Smith</td>
-                    <td>Under Construction</td>
-                    <td>
-                        <a href="#editCharacter2">Edit</a> | 
-                        <a href="#deleteCharacter2">Delete</a>
-                    </td>
-                </tr>
-                <!-- Additional rows would go here -->
+<!--                &lt;!&ndash; First Sample Row &ndash;&gt;-->
+<!--                <tr>-->
+<!--                    <td><a href="#linkToCharacterPage1">Sample Character 1</a></td>-->
+<!--                    <td>John Doe</td>-->
+<!--                    <td>Under Construction</td>-->
+<!--                    <td>-->
+<!--                        <a href="#editCharacter1">Edit</a> | -->
+<!--                        <a href="#deleteCharacter1">Delete</a>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                &lt;!&ndash; Second Sample Row &ndash;&gt;-->
+<!--                <tr>-->
+<!--                    <td><a href="#linkToCharacterPage2">Sample Character 2</a></td>-->
+<!--                    <td>Jane Smith</td>-->
+<!--                    <td>Under Construction</td>-->
+<!--                    <td>-->
+<!--                        <a href="#editCharacter2">Edit</a> | -->
+<!--                        <a href="#deleteCharacter2">Delete</a>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                &lt;!&ndash; Additional rows would go here &ndash;&gt;-->
                 {% for character in all_the_characters %}
                 <tr>
                     <td><a href="{% url 'view_character' char_id=character.id %}">{{character.name}}</a></td>

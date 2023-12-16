@@ -61,13 +61,14 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+dnd_api/.env
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+.env
 
 # Spyder project settings
 .spyderproject
@@ -116,3 +117,6 @@ cython_debug/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Pycharm Project Files
+.idea/

@@ -1,14 +1,24 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Character  # Import the Character model from the current app's models.py
+from .fithed_srd_connection import get_all_classes
 from users import views  # Import views from the 'users' app (if exists)
+import os
+
 
 def first_view(request):
     return HttpResponse('Hello Ninjas!')  # Returns a simple HTTP response saying "Hello Ninjas!"
 
+
 def create_character(request):
+    classes = get_all_classes()
+    class_options =[]
+    for c in classes:
+        class_options.append({"name": c["name"], "index": c["index"]})
     # print(request.__dict__)
-    return render(request, 'create_character.html')  # Renders the create_character.html template
+    print(class_options)
+    return render(request, 'create_character.html', context={"class_options": class_options})  # Renders the create_character.html template
+
 
 def post_char(request):
     print("Here is the POST data:")
@@ -32,6 +42,7 @@ def post_char(request):
         return redirect('dashboard')  # Redirect to the 'dashboard' view
     return render(request, 'dashboard')  # If not a POST request, render the dashboard template
 
+
 def view_character(request, char_id):
     character = Character.objects.get(id=char_id)  # Retrieve the Character instance with the given char_id
     context = {
@@ -39,12 +50,14 @@ def view_character(request, char_id):
     }
     return render(request, 'view_character.html', context)  # Render the view_character.html template with the context
 
+
 def edit_character(request, char_id):
     character = Character.objects.get(id=char_id)  # Retrieve the Character instance with the given char_id
     context = {
         "character": character  # Context variable 'character' to pass to the template
     }
     return render(request, 'edit_character.html', context)  # Render the edit_character.html template with the context
+
 
 def update_character(request, char_id):
     if request.method == 'POST':  # Check if the request method is POST
@@ -61,6 +74,7 @@ def update_character(request, char_id):
         return redirect('dashboard')  # Redirect to the 'dashboard' view
     else:
         pass  # No action for non-POST requests
+
 
 def delete_character(request, char_id):
     character = Character.objects.get(id=char_id)  # Retrieve the Character instance with the given char_id
