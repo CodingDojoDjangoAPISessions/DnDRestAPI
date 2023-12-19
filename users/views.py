@@ -9,6 +9,6 @@ def index(request):
 def dashboard(request):
     all_the_characters = Character.objects.all()
     context = {
-        'all_the_characters': all_the_characters
+        'all_the_characters': all_the_characters # queryset
     }
     return render(request, 'dashboard.html', context)
