@@ -11,4 +11,4 @@ def dashboard(request):
     context = {
         'all_the_characters': all_the_characters # queryset
     }
-    return render(request, 'dashboard.html', context)
+    return render(request, 'dashboard.html', context) #return a thing
